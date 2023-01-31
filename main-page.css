@@ -1,0 +1,250 @@
+@font-face {
+    font-family: Kartuli;
+    src: url(bpg_nino_mtavruli_bold.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(poppins/Poppins-Light.ttf);
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+/* header */
+header{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Poppins;
+    position: fixed;
+    z-index: 3;
+    background-color: rgb(22, 22, 22);
+    box-shadow: 0 2px 5px rgb(30, 158, 209);
+}
+header a{
+    text-decoration: none;
+}
+main{
+    width: 100%;
+    height: 100vh;
+    background-image: url(images/ბსლვ.jpg);
+    background-size: 100%;
+    position: relative;
+    border-bottom: 0.7em solid rgb(218, 214, 214);
+}
+main::after{
+    content: "";
+    width: 100%;
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.header-main{
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: Poppins;
+}
+.left-side{
+    display: flex;
+    align-items: center;
+}
+.left-side img{
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 40px;
+}
+.left-side h4{
+    font-size: 25px;
+    margin-right: 1em;
+    text-shadow: 0 0 2px white;
+    color: rgb(5, 113, 156);
+}
+.hamburger{
+    display: none;
+}
+
+.middle-side a{
+    color: white;
+    font-size: 16px;
+    text-transform: uppercase;
+}
+.middle-side ul{
+    display: flex;
+    justify-content: center;
+} 
+.middle-side ul li{
+    list-style: none;
+    text-align: center;
+    transition: 0.2s;
+    padding: 1.2em;
+}
+
+.middle-side a::after{
+    content: "";
+    width: 0%;
+    margin: auto;
+    display: block;
+    height: 2px;
+    background:white;
+    border-bottom: 1px solid white;
+    transition: 0.5s;
+}
+.middle-side a:hover::after{
+    width: 100%;
+}
+.right-side{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.right-side a{
+    text-decoration: none;
+    padding: 1em ;
+    border-radius: 3em;
+    background:rgb(5, 113, 156);
+    color: white;
+    font-weight: bold;
+    box-shadow: 0 0 15px rgb(30, 158, 209); 
+    border: 1px solid white;
+}
+.right-side a::after{
+    content: '';
+    width: 0%;
+    margin: auto;
+    display: block;
+    height: 2px;
+    background: white;
+    transition: 0.5s;
+}
+.right-side a:hover::after{
+    width: 100%;
+}
+#first-a{
+   margin-right: 1em; 
+}
+@media only screen and (max-width: 932px){
+    .hamburger{
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger .line{
+        width: 30px;
+        height: 3px;
+        background: white;
+        margin: 6px 0;
+    }
+    .middle-side{
+        height: 0;
+        position: absolute;
+        top: 90px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: rgb(22, 22, 22);
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+    .middle-side.active{
+        height: 450px;
+    }
+    .middle-side ul{
+        display: block;
+        width: fit-content;
+        text-align: center;
+        transition: 0.5s;
+        margin-left: -40px;
+        margin-top: 60px;
+    }
+    .right-side{
+        display: none;
+    }
+}
+/* center text */
+.center-text-container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Poppins;
+    color: white;
+    z-index: 2;
+}
+.c-t-c{
+    text-align: center;
+    font-family: cursive;
+    color: white;
+}
+.c-t-c p{
+    font-family: Kartuli;
+    font-size: 18px;
+}
+.inputs{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.inputs input{
+    width: 50%;
+    padding-left: 1.5em;
+    height: 3.5em;
+    border: none;
+    border-top-left-radius: 3em;
+    border-bottom-left-radius: 3em;
+    font-size: 15px;
+    font-family: Poppins;
+    color: black;
+}
+.inputs button{
+    width: 30%;
+    height: 3.6em;
+    border: none;
+    font-size: 15px;
+    background-color: rgb(5, 113, 156);
+    font-weight: bold;
+    color: white;
+    font-family: Poppins;
+    border-top-right-radius: 3em;
+    border-bottom-right-radius: 3em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.inputs button:hover{
+    background-color: rgb(22, 91, 240);
+}
+.inputs button:active{
+    background: white;
+    color:rgb(5, 113, 156);
+    transition: 0.3s;
+}
+@media (max-width: 384px){
+    .right-side a{
+        padding: 0.8em;
+        font-size: 14px;
+    }
+    .left-side img{
+        width: 50px;
+        height: 50px;
+    }
+}
+@media (max-width: 344px){
+    .right-side a{
+        padding: 0.7em;
+        font-size: 12px;
+    }
+    .left-side img{
+        width: 40px;
+        height: 40px;
+    }
+}

@@ -1,0 +1,66 @@
+body{
+    background: rgb(22, 22, 22);
+    font-family: Poppins;
+}
+header{
+    top: 0;
+}
+.members-main{
+    margin-top: 8em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2%;
+}
+
+.members-main img{
+    width: 23em;
+    height: 23em;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid white;
+}
+.members-text{
+    margin-left: 2em;
+}
+.members-text span{
+    font-size: 22px;
+    color: rgb(5, 113, 156);
+    font-family: Kartuli;
+}
+.members-text p{
+    color: white;
+    font-size: 18px;
+    font-family: Kartuli;
+}
+@media (max-width: 885px){
+    body{
+        height: 130vh;
+    }
+    .members-main{
+        flex-wrap: wrap;
+        text-align: center;
+    }
+    .members-text{
+        margin-top: 2em;
+        margin-left: 0;
+    }
+}
+@media (max-width: 390px){
+    .members-main img{
+        width: 20em;
+        height: 20em;
+    }
+}
+@media (max-width: 350px){
+    .members-main img{
+        width: 17em;
+        height: 17em;
+    }
+}
+@media (max-width: 285px){
+    .members-main img{
+        width: 14em;
+        height: 14em;
+    }
+}
