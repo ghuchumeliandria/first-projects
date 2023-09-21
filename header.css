@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+body a{
+    text-decoration: none;
+}
+:root{
+    --blue--light: rgb(22, 132, 175);
+    --blue--black: rgb(2, 48, 66);
+    --background: rgb(35, 32, 32);
+}
+@import url('https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap');
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 0.5em 3%;
+    color: var(--blue--light);
+    font-family: 'Tektur', cursive;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 6;
+    transition: 0.8s;
+}
+#header.style{
+    box-shadow: 0 0 20px var(--blue--light);
+    border-bottom: 2px solid white;
+    background-color: rgb(35, 32, 32);
+}
+.header-left{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    cursor: pointer;
+}
+header a{
+    text-decoration: none;
+}
+header p{
+    font-size: 16px;
+    font-weight: bold;
+    text-shadow: 1px 1px 0 rgb(208, 254, 238);
+}
+header img{
+    width: 3.5em;
+    height: 3.5em;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+.header-hamburger{
+    display: none;
+}
+.header-hamburger:hover{
+    .line{
+        transition: 0.5s;
+        background-color:rgb(21, 141, 215);
+    }
+}
+.header-hamburger:active{
+    .line{
+        color: white;
+        transition: 0.2s;
+    }
+    
+}
+.line{
+    width: 100%;
+    height: 2px;
+    background-color: white;
+    border-radius: 3px;
+}
+.header-right.active{
+    height: 400px;
+    opacity: 1;
+}
+.header-right{
+    z-index: 1;
+    display: flex;
+    
+}
+.header-right a{
+    text-decoration: none;
+    color: white;
+    padding: 0.6em 1em;
+    transition: 0.5s;
+}
+.header-right a:hover{
+    color: var(--blue--light);
+}
+.header-logo-text {
+    color: var(--blue--light);
+}
+@media (max-width: 670px){
+    .header-hamburger{
+        display: block;
+        width: 1.8em;
+        height: 1.2em;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        cursor: pointer;
+    }
+    .header-right{
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        justify-content: center;
+        position: absolute;
+        width: 300px;
+        top: 4.67em;
+        right: 0;
+        background-color: rgb(35, 32, 32);
+        height: 0;
+        border-bottom-left-radius: 3px;
+        transition: 0.5s;
+        overflow: hidden;
+        
+    }
+}

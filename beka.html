@@ -2,53 +2,45 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="info.css">
-    <link rel="stylesheet" href="main-page.css">
-    <script defer src="hamburger.js"></script>
-
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="member-about.css">
 </head>
 <body>
-    <header>
-            <div class="header-main">
-                <div class="left-side">
-                    <a href="main-page.html">
-                    <h4>Boslevi</h4>
-                    </a>
-                    <img src="images/conte.jpg" alt="">
-                </div>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="middle-side">
-                    <ul><li><a href="" class="active">About us</a></li>
-                        <li><a href="">Members</a></li>
-                        <li><a href="">Stories</a></li>
-                        <li><a href="">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="right-side">
-                    <a href="quiz.html" id="first-a">Quiz</a>
-                    <a href="signup.html">Sign up</a>
-                </div>
-            </div>
-        </header>
-        <div class="members-main">
-                <img src="images/bekacover.jpg" alt="">
-            <div class="members-text">
-                <span>Kochoio : <p>დაბადებული 2001 წლის 26 ივნისს.
-                     ახლობლები აღფრთოვანებულნი არიან მისი საოცარი ტალანტით : ბექას შეუძლია ეძინოს 24 საათის განმავლობაში , მზესა თუ წვიმაში ,
-                     თოვლსა თუ ქარში.</p></span>
-                    <span>მიღწევები : <p>2015 წელს დაიწყო სიგარეტის მოწევა , 2019 წელს ჩააბარა ერთიანი ეროვნული გამოცდები და ჩაირიცხა ს.ტ.უ _ში ,
-                         2021 წლის 31 დეკემბერს იმსახურა პირველად სავალდებულო ჯარში.
-                    </p></span>
-                    <span>სამომავლო გეგმები : <p>უცნობია.</p>
-                    </span>
-            </div>
+    
+    <header id="header"><a href="main.html">
+        <div class="header-left">
+            <img src="images/conte.jpg" alt="">
+            <p class="header-logo-text">BOSLEVI</p>
         </div>
+    </a>
+        <div class="header-hamburger" id="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+        <div class="header-right">
+            <a href="main.html">Home</a>
+            <a href="">Members</a>
+            <a href="">Stories</a>
+            <a href="">Contact</a>
+
+        </div>
+    </header>
+
+    <section class="member-about">
+        <img src="images/bekacover.jpg" alt="">
+        <div class="member-about-text">
+            <p>ბექა კაპანაძე : <span>დაიბადა 2001 წლის 26 ივნისს. დაბადებისას ტირილის ნაცვლად ეძინა, სწორედ ეს არის  მისი საოცარი ნიჭის (მუდმივი ძილის) მიზეზი.</span></p>
+            <p>მიღწევები : <span>14 წლის ასაკში დაიწყო სიგარეტის მოწევა , 16 წლის იყო როდესაც ორმა ტურამ 3 ცხვარი შეუჭამა , 18 წლისამ ჩააბარა საქართველოს ტექნიკურ უნივერსიტეტში სამთო ქიმიის ფაკულტეტზე(აზრი?),
+                2023 წელს დაამთავრა ეგ ფაკულტეტი და მუშაობს რკინიგზაში , ასევე 2022 წელს მოიხადა სავალდებულო სახმედრო სამსახური დაცვის პოლიციაში.
+            </span></p>
+            <p>გეგმები : <span>გაყვეს რკინიგზის დეპარტამენტს თუ რაცაა და რავი მოწიოს სიგარეტი მოსტყვნია კარგის ტრაკი.</span></p>
+        </div>
+    </section>
+
+    
+    <script src="hamburger.js"></script>
 </body>
 </html>

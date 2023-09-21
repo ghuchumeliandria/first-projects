@@ -2,173 +2,135 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="main-page.css">
-    <link rel="stylesheet" href="registration.css">
-    <link rel="stylesheet" href="information.css">
-    <link rel="stylesheet" href="upcoming.css">
-    <script defer src="hamburger.js"></script>
+    <link rel="stylesheet" href="header.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: 0;
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Tektur:wght@500&display=swap');
+        @font-face {
+              font-family: Kartuli;
+             src: url(bpg_nino_mtavruli_bold.ttf);
+        }
+        .form-text{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .form-text h1{
+            color: black;
+            font-family: 'Tektur', cursive;
+            font-size: 20px;
+            margin: 0.4em 0;
+        }
+        .form-text p{
+            color: black;
+            font-size: 16px;
+            font-family: Kartuli;
+        }
+        .form-text h1,p{
+            text-shadow: 5px 5px 5px var(--blue--light);
+        }
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            width: 100%;
+            background-color: black;
+        }
+        form{
+            padding: 2em;
+            background-color: white;
+            box-shadow: 0 5px 45px black;
+            border-radius: 4px;
+
+        }
+        .text-one,.word-error{
+            font-family: 'Tektur', cursive;
+            border: 1px solid red;
+            background-color: rgba(255, 0, 0, 0.1);
+            text-align: center;
+            color: red;
+            margin: 0.4em 0;
+            display: none;
+        }
+        input{
+            outline: none;
+            width: 100%;
+            height: 2.3em;
+            border-radius: 2px;
+            border: 1px solid silver;
+            padding-left: 20px;
+            font-size: 13px;
+            font-family: 'tektur', cursive;
+            background-color: white;
+            border: none;
+            border-bottom: 2px solid black;
+        }
+        header{
+            border-bottom: 2px solid white;
+            box-shadow: 0 0 20px var(--blue--light);
+        }
+        .font{
+            font-family: 'Tektur', cursive;
+            margin: 0.2em 0;
+        }
+        button{
+            margin: 1em auto 0 auto;
+            width: 110px;
+            display: block;
+            height: 2.4em;
+            border: none;
+            background-color: black;
+            color: white;
+            font-family: 'Tektur', cursive;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+        button:hover{
+            background-color: white;
+            color: black;
+            border: 2px solid black;
+        }
+        button:active{
+            background-color: black;
+            color: white;
+            transition: 0.1s;
+        }
+    </style>
 </head>
 <body>
-    <main>
-        <header>
-            <div class="header-main">
-                <div class="left-side">
-                    <a href="main-page.html">
-                    <h4>Boslevi</h4>
-                    </a>
-                    <img src="images/conte.jpg" alt="">
-                </div>
-                <div class="hamburger">
-                    <div class="line"></div>
-                    <div class="line"></div>
-                    <div class="line"></div>
-                </div>
-                <div class="middle-side">
-                    <ul><li><a href="" class="active">About us</a></li>
-                        <li><a href="">Members</a></li>
-                        <li><a href="">Stories</a></li>
-                        <li><a href="">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="right-side">
-                    <a href="quiz.html" id="first-a">Quiz</a>
-                    <a href="signup.html">Sign up</a>
-                </div>
-            </div>
-        </header>
-        <div class="center-text-container">
-            <div class="c-t-c">
-            <h1>Do you want to become a bosleveli?</h1>
+    <header id="header">
+        <div class="header-left">
+            <img src="images/conte.jpg" alt="">
+            <p class="header-logo-text">BOSLEVI</p>
+        </div>
+       <div class="header-right">
+        <p>Please Log In</p>
+       </div>
+    </header>
+
+    <form  method="Post" action="main.html" name="form" onsubmit="return validate();">
+        <div class="form-text">
+            <h1>Do You Want To Become a Bosleveli?</h1>
             <p>არგირჩევ ძმა კარგად დაფიქრდი :)</p>
-            <h2>Are You Ready? Sure. Just Write Thank You. </h2>
-            <div class="inputs">
-                <input type="text" placeholder="Text Thank you">
-                <button>Get started</button>
-            </div>
-            </div>
+            <h1>Are You Ready?  Just Write Thank You.</h1>
         </div>
-    </main>
-
-    <div class="registration">
-        <h1>Login In</h1>
-        <div class="registration-main">
-            <div class="reg-left-sec">
-                 <img src="images/ბსლვ1.jpg" alt="">
-            </div>
-            <div class="reg-right-sec">
-                <input type="text" placeholder="Username">
-                <input type="password" placeholder="Password">
-                <a href="">Forgot your password?</a>
-                <a href="">Create an account</a>
-                <button>Get started</button>
-            </div>
-        </div>
-    </div>
-
-    <div class="information">
-        <div class="inf-mn">
-            <h1>Now you can meet the members :)</h1>
-       <div class="info-main">
-        <a href="beka.html">
-        <div class="info-card">
-            <img src="images/bekacover.jpg" alt="">
-            <div class="card-texts">
-            <p>Kochoio</p>
-            <h3>აფიციანტი</h3>
-            </div>
-        </div>
-    </a>
-        <a href="ana.html">
-        <div class="info-card">
-            <img src="images/anacover.jpg" alt="">
-            <div class="card-texts">
-            <p>Banzi</p>
-            <h3>ყოველთვის დაღლილია</h3>
-            </div>
-        </div>
-    </a>
-    <a href="cotne.html">
-        <div class="info-card">
-            <img src="images/ცოტნე.jpg" alt="">
-            <div class="card-texts">
-            <p>Tsotne Tsiyvi</p>
-            <h3>ანტი ღრუზინი</h3>
-            </div>
-        </div>
-        </a>
-        <a href="rezo.html">
-        <div class="info-card">
-            <img src="images/mariamcover (2).jpg" alt="">
-            <div class="card-texts">
-            <p>Remazi</p>
-            <h3>მებუნიკე</h3>
-            </div>
-        </div>
-        </a>
-        <a href="maro.html">
-        <div class="info-card">
-            <img src="images/mariamcover (1).jpg" alt="">
-            <div class="card-texts">
-            <p>Lamazi</p>
-            <h3>P.M ტუკვაძე</h3>
-            </div>
-        </div>
-        </a>
-        <a href="me.html">
-        <div class="info-card">
-            <img src="images/mecover.jpg" alt="">
-            <div class="card-texts">
-            <p>Ymandria</p>
-            <h3>პტრ დრიფტერი</h3>
-            </div>
-        </div>
-        </a>
-        </div>
-       </div> 
-    </div>
-
-    <div class="upcoming-members">
-        <div class="upcoming-main">
-            <h1>Upcoming Members...</h1>
-            <div class="upcoming-cards-main">
-            <div class="upcoming-card ">
-                <img src="images/nonacover.jpg" alt="">
-                <div class="upcoming-texts">
-                <p>Niona</p>
-                </div>
-            </div>
-            <div class="upcoming-card ">
-                <img src="images/sandrikacover.jpg" alt="">
-                <div class="upcoming-texts">
-                <p>Sandrika</p>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-    
-    <div class="upcoming-members">
-        <div class="upcoming-main">
-            <h1>Main Characters...</h1>
-            <div class="upcoming-cards-main">
-            <div class="upcoming-card ">
-                <img src="images/tarielcover.jpg" alt="">
-                <div class="upcoming-texts">
-                <p>B.Tarieli</p>
-                </div>
-            </div>
-            <div class="upcoming-card ">
-                <img src="images/ფრიდონი.jpg" alt="">
-                <div class="upcoming-texts">
-                <p>B.Fridoni</p>
-                </div>
-            </div>
-            </div>
-        </div>
-    </div>
-
+        <div class="font ">Enter Your Name</div>
+        <input autocomplete="off" type="text" name="email" placeholder="U Have a Name? Sure?">
+        <div class='text-one' id="text-error">Please Type Correct Your Name</div>
+        <div class="font font2">Enter Secret Word</div>
+        <input type="text" name="pass" placeholder="If you Don't know , Fuck off">
+        <div class="word-error" id="word-error">Please Type Correct Your Word</div>
+        <button type="submit">Log In</button>
+    </form>
+    <script src="index.js"></script>
 </body>
 </html>

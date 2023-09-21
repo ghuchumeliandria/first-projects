@@ -1,0 +1,321 @@
+body{
+    border-bottom: 2px solid white;
+    background-color: var(--background);
+    
+}
+main{
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    padding: 3em 3%;
+    background-color: var(--background);
+}
+section{
+    width: 100%;
+    position: relative;
+}
+@font-face {
+    font-family: Kartuli;
+    src: url(bpg_nino_mtavruli_bold.ttf);
+}
+@font-face {
+    font-family: poppins;
+    src: url(poppins/Poppins-BlackItalic.ttf);
+}
+video{
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    width: 100%;
+    height: auto;
+}
+.home-page{
+    padding: 18em 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.144),rgba(0, 0, 0, 0.048));
+    background-position: center;
+    background-size: cover;
+}
+.home-page-text{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -80%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.home-page-text h1{
+    color: white;
+    font-family: 'Tektur', cursive;
+    font-size: 98px;
+}
+.home-page-text p{
+    color: white;
+    font-size: 26px;
+    font-family: Kartuli;
+}
+.thank-you{
+    width: 100%;
+    display: flex;
+    height: 3em;
+    min-width: 300px;
+}
+.thank-you input{
+    width: 70%;
+    padding-left: 1em;
+    border: none;
+    border-top-left-radius: 2em;
+    border-bottom-left-radius: 2em;
+    height: 100%;
+    font-family: poppins;
+    font-size: 13px;
+    outline: none;
+}
+.thank-you input::placeholder{
+    color: var(--blue--light);
+}
+.thank-you button{
+    width: 30%;
+    height: 100%;
+    border: none;
+    margin-left: -1px;
+    background-color: var(--blue--light);
+    color: white;
+    font-family: poppins;
+    border-top-right-radius: 2em;
+    border-bottom-right-radius: 2em;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.thank-you button:hover{
+    background-color: white;
+    color: var(--blue--light);
+}
+@media(max-width: 320px){
+    .thank-you{
+        min-width: 250px;
+        
+    }
+}
+@media(max-width: 267px){
+    .thank-you{
+        min-width: 200px;   
+    }
+    .home-page-text{
+        margin-top: 2.3em;
+    }
+}
+@media(min-aspect-ratio: 16/9){
+    video{
+        width: 100%;
+        height: auto;
+    }
+}
+@media(max-aspect-ratio: 16/9){
+    video{
+        width: auto;
+        height: 100%;
+    }
+}
+/*--------------MEMBERS------------*/
+.members h1{
+    font-family: 'Tektur', cursive;
+    text-shadow: 5px 5px 5px var(--blue--light);
+    font-size: 32px;          
+}
+.cards-grid{
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    align-items: center;
+    gap: 70px;
+    justify-content: center;
+}
+.card{
+    cursor: pointer;
+    width: 230px;
+    background-color: white;
+    height: 290px;
+    text-align: center;
+    color: var(--blue--light);
+    font-family: Kartuli;
+    border-radius: 10px;
+    border: 3px solid white;
+    box-shadow: 0 0 20px  rgba(12, 131, 242, 0.866);
+}
+.card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    object-position: center;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+.card p{
+    margin-top: 6px;
+}
+.card:hover{
+    transition: 1s;
+}
+.card:hover::after{
+     content: '';
+     display: block;
+     margin-top: 1.5em;
+     background-color: white;
+     transition: 0.5s;
+     height: 4px;
+     width: 100%;
+     border-radius: 6px;
+     box-shadow: 0 0 20px  rgba(12, 131, 242, 0.866);
+}
+@media(max-width: 833px){
+    .cards-grid{
+        grid-template-columns: auto auto;
+    }
+}    
+@media (max-width: 560px){
+        .cards-grid{
+            grid-template-columns:  auto;
+        }
+}
+@media(max-width: 270px){
+    .card{
+        width: 190px;
+        height: 250px;
+    }
+    .card img{
+        height: 210px;
+    }
+}
+@media(min-width: 1300px){
+    .cards-grid{
+        column-gap: 200px;
+    }
+}
+/*------------------ABOUT---------------------*/
+
+.about{
+    width: 100%;
+    padding: 10em 0;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.339),rgba(0, 0, 0, 0.339)), url(images/ბსლვ1.jpg);
+}
+.about h1{
+    font-size: 36px;
+    color: white;
+    font-family: 'Tektur', cursive;
+    text-align: center;
+    text-shadow: 5px 5px 5px var(--blue--light);
+}
+.about p{
+    font-family: Kartuli;
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    width: 45%;
+    margin: 0.6em auto;
+}
+.about a{
+    padding: 0.7em 1.8em;
+    background-color: white;
+    color: var(--blue--light);
+    text-decoration: none;
+    margin: 0 auto;
+    font-family: 'Tektur' , cursive;
+    border: 2px solid var(--blue--light);
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.about a:hover{
+    background-color: var(--blue--light);
+    color: white;
+
+}
+/*-----------CONTACT-----------*/
+
+.contact{
+    padding: 2em 3%;
+    background-color: var(--background);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.contact-left{
+    display: flex;
+    flex-direction: column;
+}
+.instagram{
+    display: flex;
+    align-items:center;
+    gap: 10px;
+}
+.instagram img{
+    width: 25px;
+    height: 25px;
+}
+.instagram p{
+    color: white;
+    font-size: 16px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+.contact-right img{
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+}
+.contact-left a{
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 5px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    transition: 0.5s;
+}
+.phone2{
+    display: flex;
+    align-items: center;
+}
+.contact-left a:hover{
+    color: var(--blue--light);
+}
+.phone p{
+   color: white;
+   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+   margin-left: 10px;
+}
+
+@media (max-width: 827px) {
+    .contact{
+        flex-direction: column;
+        gap: 50px;
+        text-align: center;
+        padding: 4em 3%;
+    }
+    .instagram{
+        margin: 0 auto;
+    }
+}
+@media(max-width: 433px){
+    .contact-right img{
+        width: 300px;
+        height: 300px;
+    }
+    .phone{
+        flex-direction: column;
+    }
+}
+@media(max-width: 333px){
+    .contact-right img{
+        width: 200px;
+        height: 200px;
+    }
+}
